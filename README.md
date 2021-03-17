@@ -43,7 +43,7 @@ And once run, the widget code will generate a new WebP image file on the fly (or
 
 The browser will pick up the best source for the provided image, and thanks to revolutionary WebP compression, it will make your website loading faster.
 
-# Installation
+## Installation
 
 The preferred way to install the library is through the [composer](https://getcomposer.org/).
 
@@ -62,6 +62,10 @@ Or add:
 to the`require` section within your `composer.json` config file.
 
 The installation package is available at https://packagist.org/packages/pelock/imgopt
+
+The Yii2 extension is available at https://www.yiiframework.com/extension/pelock/yii2-imgopt
+
+Source code is available at https://github.com/PELock/yii2-imgopt
 
 ## Image quality
 
