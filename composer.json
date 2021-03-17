@@ -1,0 +1,23 @@
+{
+    "name": "pelock/imgopt",
+    "description": "Image optimization widget for Yii2 Framework with auto WebP image format generation from PNG/JPG files.",
+    "type": "yii2-extension",
+    "keywords": ["image", "optimization", "yii2", "webp", "jpg", "png", "generator"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Bartosz Wójcik",
+            "email": "support@pelock.com",
+            "homepage": "https://www.pelock.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": ">=2.0.4"
+    },
+    "autoload": {
+            "psr-4": {
+                    "PELock\\yii2-imgopt\\": "src/"
+            }
+    }
+}
