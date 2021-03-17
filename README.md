@@ -27,7 +27,7 @@ it will automatically generate an extra image in new [WebP](https://developers.g
 Replace your `IMG` tag within your `HTML` templates with a call to:
 
 ```php
-<?= \pelock\imgopt\ImgOpt::widget(["src" => "/images/product/extra.png", "alt" => "Extra product" ]) ?>
+<?= \PELock\ImgOpt\ImgOpt::widget(["src" => "/images/product/extra.png", "alt" => "Extra product" ]) ?>
 ```
 
 (Image path is relative to [Yii2 Framework @webroot alias](https://www.yiiframework.com/wiki/667/yii-2-list-of-path-aliases-available-with-default-basic-and-advanced-app))
@@ -82,7 +82,7 @@ If the generated WebP image is larger than the original image, the default `<img
 If for some reason you want to disable WebP file serving via the HTML `<picture>` tag, you can do it per widget settings:
 
 ```php
-<?= \pelock\imgopt\ImgOpt::widget(["src" => "/images/product/extra.png", "alt" => "Extra product", "disable" => true ]) ?>
+<?= \PELock\ImgOpt\ImgOpt::widget(["src" => "/images/product/extra.png", "alt" => "Extra product", "disable" => true ]) ?>
 ```
 
 ## Recreate WebP file
@@ -92,7 +92,7 @@ The widget code automatically detects if there's a WebP image in the directory w
 If you wish to force the widget code to recreate it anyway, pass the special param to the widget code:
 
 ```php
-<?= \pelock\imgopt\ImgOpt::widget(["src" => "/images/product/extra.png", "alt" => "Extra product", "recreate" => true ]) ?>
+<?= \PELock\ImgOpt\ImgOpt::widget(["src" => "/images/product/extra.png", "alt" => "Extra product", "recreate" => true ]) ?>
 ```
 
 You might want to recreate all of the WebP files and to do that without modifying, change the widget source code from:
@@ -129,7 +129,7 @@ Instead of:
 You can replace it with more compact widget code:
 
 ```php
-<?= \pelock\imgopt\ImgOpt::widget(["lightbox_data" => "image-1", "lightbox_src" => "/images/sunset.jpg', "src" => "/images/sunset-thumbnail.jpg', "alt" => "Sunset" ]) ?>
+<?= \PELock\ImgOpt\ImgOpt::widget(["lightbox_data" => "image-1", "lightbox_src" => "/images/sunset.jpg', "src" => "/images/sunset-thumbnail.jpg', "alt" => "Sunset" ]) ?>
 ```
 
 And it will generate this HTML code:
