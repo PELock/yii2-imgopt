@@ -50,13 +50,13 @@ The preferred way to install the library is through the [composer](https://getco
 Run:
 
 ```
-php composer.phar require --prefer-dist pelock/imgopt "*"
+php composer.phar require --prefer-dist pelock/yii2-imgopt "*"
 ```
 
 Or add:
 
 ```
-"pelock/imgopt": "*"
+"pelock/yii2-imgopt": "*"
 ```
 
 to the`require` section within your `composer.json` config file.
