@@ -61,7 +61,7 @@ Or add:
 
 to the`require` section within your `composer.json` config file.
 
-The installation package is available at https://packagist.org/packages/pelock/imgopt
+The installation package is available at https://packagist.org/packages/pelock/yii2-imgopt
 
 The Yii2 extension is available at https://www.yiiframework.com/extension/pelock/yii2-imgopt
 
