@@ -145,7 +145,7 @@ And it will generate this HTML code:
 
 ## Bugs, questions, feature requests
 
-Hope you like it. For questions, bug & feature requests visite my site:
+Hope you like it. For questions, bug & feature requests visit my site:
 
 Bartosz Wójcik | https://www.pelock.com
 
