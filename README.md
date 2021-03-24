@@ -129,7 +129,7 @@ Instead of:
 You can replace it with more compact widget code:
 
 ```php
-<?= \PELock\ImgOpt\ImgOpt::widget(["lightbox_data" => "image-1", "lightbox_src" => "/images/sunset.jpg', "src" => "/images/sunset-thumbnail.jpg', "alt" => "Sunset" ]) ?>
+<?= \PELock\ImgOpt\ImgOpt::widget(["lightbox_data" => "image-1", "lightbox_src" => "/images/sunset.jpg", "src" => "/images/sunset-thumbnail.jpg", "alt" => "Sunset" ]) ?>
 ```
 
 And it will generate this HTML code:
