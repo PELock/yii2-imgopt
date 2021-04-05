@@ -70,6 +70,7 @@ use yii\helpers\Html;
  * @property string $alt image alternative description used as alt="description" property (optional)
  * @property string $css image class list as a string (can contain multiple classes) used as class="one two three..." (optional)
  * @property string $style image custom CSS styles used as style="one; two; three;..." (optional)
+ * @property string $loading lazy loading option (auto|lazy|eager) (https://web.dev/browser-level-image-lazy-loading/) (optional)
  * @property string $itemprop use schema itemprop="image" value (optional)
  * @property string $height  height used as height="value" (optional)
  * @property string $width width used as width="value" (optional)
@@ -107,6 +108,11 @@ class ImgOpt extends Widget
 	 * @var string image custom CSS styles used as style="one; two; three;..." (optional)
 	 */
 	public $style;
+
+	/**
+	 * @var string lazy loading option (auto|lazy|eager) (https://web.dev/browser-level-image-lazy-loading/) (optional)
+	 */
+	public $loading;
 
 	/**
 	 * @var string use schema itemprop="image" value (optional)
@@ -294,8 +300,8 @@ class ImgOpt extends Widget
 			"alt" => $this->alt,
 			"height" => $this->height,
 			"width" => $this->width,
+			"loading" => $this->loading,
 			"itemprop" => $this->itemprop
-
 		]);
 
 		// was WebP image generated from our unoptimized image?

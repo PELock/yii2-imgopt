@@ -43,6 +43,25 @@ And once run, the widget code will generate a new WebP image file on the fly (or
 
 The browser will pick up the best source for the provided image, and thanks to revolutionary WebP compression, it will make your website loading faster.
 
+## Image lazy-loading
+
+[Lazy images loading](https://web.dev/browser-level-image-lazy-loading/) makes the browser load the images when it reach a certain point, after which the image became visible in the current browser tab. You can use this pure HTML feature (no JS involved) from within the widget:
+
+```php
+<?= \PELock\ImgOpt\ImgOpt::widget(["src" => "/images/product/extra.png", "loading" => "lazy" ]) ?>
+```
+
+The generated output looks like this:
+
+```html
+<picture>
+    <source type="image/webp" srcset="/images/product/extra.webp">
+    <img src="/images/product/extra.png" loading="lazy">
+</picture>
+```
+
+Use it to make your website loading times even faster.
+
 ## Installation
 
 The preferred way to install the library is through the [composer](https://getcomposer.org/).
