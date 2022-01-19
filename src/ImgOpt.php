@@ -190,6 +190,9 @@ class ImgOpt extends Widget
 			return null;
 		}
 
+		// modification time of the original image
+		$img_modification_time = filemtime($img_full_path);
+
 		$original_file_size = filesize($img_full_path);
 
 		if ($original_file_size === 0)
@@ -208,15 +211,29 @@ class ImgOpt extends Widget
 		$webp_short_path = $short_file_info["dirname"] . "/" . $webp_filename_with_extension;
 		$webp_full_path = $file_info["dirname"]  . "/" . $webp_filename_with_extension;
 
-
+		// if the WEBP file already exists check if we want to re-create it
 		if ($recreate === false && file_exists($webp_full_path))
 		{
+
+			// if the WEBP file is bigger than the original image
+			// use the original image
 			if (filesize($webp_full_path) >= $original_file_size)
 			{
 				return null;
 			}
 
-			return $webp_short_path;
+			$webp_modification_time = filemtime($webp_full_path);
+
+			// if the modification dates on the original image
+			// and WEBP image are the same = use the WEBP image
+			// in any other case - recreate the file
+			if ($img_modification_time !== false && $webp_modification_time !== false)
+			{
+				if ($img_modification_time === $webp_modification_time)
+				{
+					return $webp_short_path;
+				}
+			}
 		}
 
 		if ($ext === "png")
@@ -252,6 +269,15 @@ class ImgOpt extends Widget
 
 		// release input image
 		imagedestroy($img);
+
+
+		// set modification time on the WEBP file to match the
+		// modification time of the original image
+		if ($img_modification_time !== false)
+		{
+			touch($webp_full_path, $img_modification_time);
+		}
+
 
 		// if the final WEBP image is bigger than the original file
 		// don't use it (use the original only)

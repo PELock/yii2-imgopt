@@ -62,6 +62,12 @@ The generated output looks like this:
 
 Use it to make your website loading times even faster.
 
+## Automatic WebP generation for updated images (new in v1.2.0)
+
+ImgOpt will set the modification date of the generated WebP image to match the modification date of the original image file.
+
+If ImgOpt detects that a file modification date of the source image file is different than the date of the previously generated WebP image file - it will automatically re-create the new WebP image file!
+
 ## Installation
 
 The preferred way to install the library is through the [composer](https://getcomposer.org/).
@@ -167,6 +173,3 @@ And it will generate this HTML code:
 Hope you like it. For questions, bug & feature requests visit my site:
 
 Bartosz Wójcik | https://www.pelock.com
-
- 
-
